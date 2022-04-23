@@ -1,17 +1,12 @@
-import {Image,StyleSheet,Text,View} from 'react-native';
-import RestaurantItem from './src/components/RestaurantItem';
-import restaurants from './assets/data/restaurants.json'
+import {StyleSheet,View} from 'react-native';
+// import HomeScreen from './src/screens/HomeScreen'
+import RestaurantDetails from './src/screens/RestaurantDetails'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <RestaurantItem
-        restaurant={restaurants[0]}
-      />
-      <RestaurantItem
-        restaurant={restaurants[3]}
-      />
-
+      <RestaurantDetails />
     </View>
   );
 }
@@ -26,7 +21,6 @@ const styles=StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
   },
 
 });
