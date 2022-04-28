@@ -1,6 +1,7 @@
-import {StyleSheet,View,Text,Image} from 'react-native';
+import {StyleSheet,View,Text,Image,FlatList} from 'react-native';
 import restaurants from '../../assets/data/restaurants.json'
 import {Ionicons} from '@expo/vector-icons'
+import MenuList from '../components/MenuList';
 
 const restaurant=restaurants[0];
 
@@ -23,6 +24,10 @@ const RestaurantDetails=() => {
 
 
             </View>
+            <FlatList
+                data={restaurant.dishes}
+                renderItem={({item}) => <MenuList dishes={item} />}
+            />
 
         </View>
 
