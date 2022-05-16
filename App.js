@@ -1,21 +1,22 @@
-import {StyleSheet,View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 // import HomeScreen from './src/screens/HomeScreen'
-import RestaurantDetails from './src/screens/RestaurantDetails'
+// import RestaurantDetails from './src/screens/RestaurantDetails'
+import DishDetail from './src/screens/DishDetail';
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <RestaurantDetails />
+    <View style={ styles.container }>
+      {/* <RestaurantDetails /> */ }
+      <DishDetail />
     </View>
   );
 }
 
-import React from 'react'
 
 
 
-const styles=StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',

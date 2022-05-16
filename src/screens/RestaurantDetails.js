@@ -1,19 +1,19 @@
-import {StyleSheet,View,Text,Image,FlatList} from 'react-native';
+import { StyleSheet, View, Text, Image, FlatList } from 'react-native';
 import restaurants from '../../assets/data/restaurants.json'
 import MenuList from '../components/MenuList';
 import Detailsheader from './DetailsHeader';
 
-const restaurant=restaurants[0];
+const restaurant = restaurants[0];
 
-const RestaurantDetails=() => {
+const RestaurantDetails = () => {
     return (
-        <View style={styles.page}>
+        <View style={ styles.page }>
 
 
             <FlatList
-                ListHeaderComponent={() => <Detailsheader restaurant={restaurant} />}
-                data={restaurant.dishes}
-                renderItem={({item}) => <MenuList dishes={item} />}
+                ListHeaderComponent={ () => <Detailsheader restaurant={ restaurant } /> }
+                data={ restaurant.dishes }
+                renderItem={ ({ item }) => <MenuList dishes={ item } /> }
             />
 
         </View>
@@ -21,10 +21,10 @@ const RestaurantDetails=() => {
     );
 }
 
-const styles=StyleSheet.create({
+const styles = StyleSheet.create({
     image: {
         width: "100%",
-        aspectRatio: 5/3,
+        aspectRatio: 5 / 3,
     },
     page: {
         flex: 1,
